@@ -1,0 +1,27 @@
+{
+  "provider": "google-web-speech-free",
+  "transcript": "help me I have fallen please help me",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 0.0,
+      "text": "help me I have fallen please help me",
+      "distress_detected": true,
+      "matched_keywords": [
+        "fallen",
+        "help",
+        "help me",
+        "i have fallen"
+      ]
+    }
+  ],
+  "distress_detected": true,
+  "matched_keywords": [
+    "fallen",
+    "help",
+    "help me",
+    "i have fallen"
+  ],
+  "distress_score": 1.0,
+  "audio_file": "24_sitting-43896a98.wav"
+}

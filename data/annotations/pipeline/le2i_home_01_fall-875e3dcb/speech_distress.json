@@ -1,0 +1,10 @@
+{
+  "provider": "offline-fallback",
+  "transcript": "",
+  "segments": [],
+  "note": "No live STT provider reachable or GROQ_API_KEY not set. Google Web Speech error:",
+  "distress_detected": false,
+  "matched_keywords": [],
+  "distress_score": 0.0,
+  "audio_file": "le2i_home_01_fall-875e3dcb.wav"
+}

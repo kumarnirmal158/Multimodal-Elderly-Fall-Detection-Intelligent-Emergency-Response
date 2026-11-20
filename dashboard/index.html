@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimodal Elderly Fall Detection & Emergency Response</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <h1>Elderly Care Monitor</h1>
+            <p>Multimodal Fall Detection, VLM Reasoning &amp; Emergency Response</p>
+        </div>
+        <div class="header-actions">
+            <span id="connection-status" class="status-indicator">Connecting...</span>
+            <button id="escalate-demo-btn" class="secondary-btn">Simulate Escalation</button>
+            <button id="reset-db-btn" class="danger-btn">Reset DB</button>
+            <button id="refresh-btn" class="refresh-btn">Refresh</button>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+
+        <!-- Prerecorded Media Upload -->
+        <section class="panel-card">
+            <h2>1. Prerecorded Media Analysis (No Live Camera / Mic)</h2>
+            <form id="upload-form" class="upload-grid">
+                <div>
+                    <label for="video-file">Video File (.mp4 / .avi)</label>
+                    <input type="file" id="video-file" accept=".mp4,.avi" required>
+                </div>
+                <div>
+                    <label for="audio-file">Optional Audio (.wav / .mp3)</label>
+                    <input type="file" id="audio-file" accept=".wav,.mp3">
+                </div>
+                <div>
+                    <label for="resident-name">Resident Name</label>
+                    <input type="text" id="resident-name" value="Mr. John" required>
+                </div>
+                <div>
+                    <label for="room-location">Room Location</label>
+                    <input type="text" id="room-location" value="Room 204" required>
+                </div>
+                <div class="upload-submit">
+                    <button type="submit" id="upload-btn" class="refresh-btn">Run Multimodal Pipeline</button>
+                </div>
+            </form>
+            <p id="upload-status" class="muted-note"></p>
+        </section>
+
+        <!-- Overview -->
+        <section class="overview-section">
+            <h2>2. System Overview</h2>
+            <div class="summary-grid">
+                <article class="summary-card">
+                    <p>Total Incidents</p>
+                    <h3 id="total-incidents">—</h3>
+                </article>
+                <article class="summary-card">
+                    <p>Possible Fall Candidates</p>
+                    <h3 id="possible-falls">—</h3>
+                </article>
+                <article class="summary-card">
+                    <p>Open / Active Alerts</p>
+                    <h3 id="open-alerts">—</h3>
+                </article>
+                <article class="summary-card">
+                    <p>Pending Follow-Up Tasks</p>
+                    <h3 id="pending-tasks">—</h3>
+                </article>
+            </div>
+        </section>
+
+        <!-- Alerts & Escalation -->
+        <section class="alerts-section">
+            <h2>3. Caregiver Alerts &amp; Escalation Ladder</h2>
+            <div id="alerts-container">
+                <p>Loading alerts...</p>
+            </div>
+        </section>
+
+        <!-- Incidents -->
+        <section class="incidents-section">
+            <div class="section-heading">
+                <h2>4. Incident Records &amp; Verification</h2>
+                <select id="incident-filter">
+                    <option value="ALL">All Incidents</option>
+                    <option value="POSSIBLE_MULTIMODAL_FALL_CANDIDATE">Possible Multimodal Falls</option>
+                    <option value="VIDEO_INACTIVITY_FALL_CANDIDATE">Video + Inactivity Falls</option>
+                    <option value="VIDEO_ONLY_CANDIDATE">Video-Only Candidates</option>
+                    <option value="AUDIO_ONLY_CANDIDATE">Audio-Only Candidates</option>
+                    <option value="INSUFFICIENT_EVIDENCE">Insufficient Evidence</option>
+                </select>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Resident / Room</th>
+                            <th>Time</th>
+                            <th>Video</th>
+                            <th>Audio</th>
+                            <th>Combined</th>
+                            <th>Classification</th>
+                            <th>Verification</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="incidents-table-body">
+                        <tr><td colspan="10">Loading incidents...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Incident Details & Caregiver Verification -->
+        <section id="incident-details-section" class="details-section" hidden>
+            <h2>Incident Evidence, VLM Summary &amp; Verification</h2>
+            <div id="incident-details">Select an incident to inspect.</div>
+        </section>
+
+        <!-- Follow-Up Tasks -->
+        <section class="tasks-section">
+            <h2>5. Post-Fall Follow-Up Tasks</h2>
+            <div id="tasks-container">
+                <p>Loading follow-up tasks...</p>
+            </div>
+        </section>
+
+        <!-- Evaluation Dashboard -->
+        <section class="panel-card">
+            <h2>6. Multimodal Evaluation Dashboard (Sub-Case 3)</h2>
+            <div id="evaluation-container">
+                <p>Loading evaluation metrics...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Multimodal Elderly Fall Detection &amp; Intelligent Emergency Response | Simulated escalation notifications for demonstration.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+[
+  {
+    "video_name": "fall_activity.mp4",
+    "ground_truth_fall": true,
+    "scenario": "Outdoor slip between trash bins with loud impact crash",
+    "expected_audio_impact": true,
+    "expected_speech_distress": false
+  },
+  {
+    "video_name": "fall_activity_1.mp4",
+    "ground_truth_fall": true,
+    "scenario": "Indoor fall onto floor mat followed by prolonged motionless lying",
+    "expected_audio_impact": true,
+    "expected_speech_distress": false
+  },
+  {
+    "video_name": "fall_activity_2.mp4",
+    "ground_truth_fall": true,
+    "scenario": "Running slip/fall on muddy path with rapid recovery",
+    "expected_audio_impact": true,
+    "expected_speech_distress": false
+  },
+  {
+    "video_name": "normal_activity.mp4",
+    "ground_truth_fall": false,
+    "scenario": "Indoor walking, sitting/standing on chair with continuous background speech",
+    "expected_audio_impact": false,
+    "expected_speech_distress": false
+  },
+  {
+    "video_name": "normal_activity_1.mp4",
+    "ground_truth_fall": false,
+    "scenario": "Indoor bending down to pick up a water bottle and drinking",
+    "expected_audio_impact": false,
+    "expected_speech_distress": false
+  }
+]

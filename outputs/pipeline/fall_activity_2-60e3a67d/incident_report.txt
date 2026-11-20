@@ -1,0 +1,9 @@
+ELDERLY FALL DETECTION - MULTIMODAL INCIDENT REPORT
+==========================================================
+Overall assessment: VIDEO_ONLY_CANDIDATE
+Candidate events  : 1
+
+Event 1 | VIDEO_ONLY_CANDIDATE | Priority: REVIEW_AUDIO_CONTEXT
+  Time: 2.167s - 2.3s | Inactivity: 0.0s
+  Scores -> Video: 62.0 | Audio: 19.41 | Combined: 47.09
+  VLM (rapid_fall_recovery): Pose analysis recorded a 0.13s candidate window (video score 62.0/100, post-event inactivity 0.0s). Audio impact support=False, speech distress=False.
